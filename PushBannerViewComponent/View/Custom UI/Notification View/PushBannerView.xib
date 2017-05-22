@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PushBannerView" customModule="PushBannerViewComponent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLC-ui-S57">
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message this is for testing" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" translatesAutoresizingMaskIntoConstraints="NO" id="10Z-V2-WvU">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notification" translatesAutoresizingMaskIntoConstraints="NO" id="UwC-4a-IuG">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="0A4-9d-Jkk"/>
+                                <constraint firstAttribute="width" constant="20" id="Zia-Do-Bnm"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.6705882353" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="10Z-V2-WvU" firstAttribute="leading" secondItem="UwC-4a-IuG" secondAttribute="trailing" constant="10" id="9Au-zG-V1P"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="10Z-V2-WvU" secondAttribute="bottom" id="D6n-oB-Hgo"/>
+                        <constraint firstItem="UwC-4a-IuG" firstAttribute="centerY" secondItem="MLC-ui-S57" secondAttribute="centerY" id="KNj-tl-Ajc"/>
+                        <constraint firstAttribute="trailing" secondItem="10Z-V2-WvU" secondAttribute="trailing" constant="10" id="Vv3-AP-acy"/>
+                        <constraint firstItem="10Z-V2-WvU" firstAttribute="top" secondItem="MLC-ui-S57" secondAttribute="top" constant="23" id="fsK-XY-yfl"/>
+                        <constraint firstItem="UwC-4a-IuG" firstAttribute="leading" secondItem="MLC-ui-S57" secondAttribute="leading" constant="10" id="ogL-TJ-cXx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MLC-ui-S57" secondAttribute="trailing" id="0qo-eZ-APu"/>
+                <constraint firstItem="MLC-ui-S57" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="74a-zZ-CqT"/>
+                <constraint firstAttribute="bottom" secondItem="MLC-ui-S57" secondAttribute="bottom" id="A8e-T6-kWp"/>
+                <constraint firstItem="MLC-ui-S57" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nqT-Nf-pcf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="MLC-ui-S57" id="8EJ-OQ-Us6"/>
+                <outlet property="imageView" destination="UwC-4a-IuG" id="ggA-r6-cPi"/>
+                <outlet property="messageLabel" destination="10Z-V2-WvU" id="dUW-vT-2Ty"/>
+            </connections>
+            <point key="canvasLocation" x="-162" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Notification" width="16" height="19"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
